@@ -23,31 +23,28 @@ const Route = () => {
                     headerShown: false,
                     tabBarStyle: {
                         height: 50,
-                        marginHorizontal: 10,
-                        marginBottom: 10,
-                        borderRadius: 10
                     },
                     tabBarIcon: ({ focused, size, colour }) => {
                         let iconName;
                         if (route.name === 'Home') {
                             iconName = focused ? 'home-sharp' : 'home-outline';
                             size = focused ? size + 8 : size + 2,
-                                colour = focused ? '#0082f7' : '#808080'
+                                colour = focused ? '#000080' : '#808080'
                         }
                         if (route.name === 'TimeTable') {
                             iconName = focused ? 'md-calendar-sharp' : 'md-calendar-outline';
                             size = focused ? size + 8 : size + 2,
-                                colour = focused ? '#0082f7' : '#808080'
+                                colour = focused ? '#000080' : '#808080'
                         }
                         if (route.name === 'Chat') {
                             iconName = focused ? 'chatbubbles-sharp' : 'chatbubbles-outline';
                             size = focused ? size + 8 : size + 2,
-                                colour = focused ? '#0082f7' : '#808080'
+                                colour = focused ? '#000080' : '#808080'
                         }
                         if (route.name === 'Profile') {
                             iconName = focused ? 'person' : 'person-outline';
                             size = focused ? size + 8 : size + 2,
-                                colour = focused ? '#0082f7' : '#808080'
+                                colour = focused ? '#000080' : '#808080'
                         }
                         return <Ionicons name={iconName} size={size} color={colour} />
                     }
