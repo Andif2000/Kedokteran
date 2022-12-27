@@ -5,18 +5,20 @@ import Ionicons from '@expo/vector-icons/Ionicons'
 import { StatusBar } from 'expo-status-bar'
 
 const SearchCustom = (props) => {
-    const [search, setSearch] = useState('');
     return (
         <View
             style={{
                 marginHorizontal: 20,
                 marginVertical: 10,
-                flexDirection: 'row'
+                flexDirection: 'row',
+                borderWidth:0.8,
+                borderRadius:5,
+                borderColor:'#000080'
             }}>
             <TextInput
                 placeholder={props.placeholder}
-                value={search}
-                onChangeText={(text) => { setSearch(text) }}
+                value={props.search}
+                onChangeText={(text) => { props.setSearch(text) }}
                 style={{
                     backgroundColor: '#dedede',
                     elevation: 3,
@@ -39,7 +41,7 @@ const SearchCustom = (props) => {
                 <Ionicons
                     name='search'
                     size={30} 
-                    style={{color:'#000080'}}/>
+                    style={{color:'#000080',padding:2}}/>
             </TouchableOpacity>
         </View>
     )
