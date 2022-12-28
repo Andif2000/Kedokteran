@@ -1,12 +1,13 @@
-import { View, Text, StyleSheet, Touchable, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, StyleSheet, Touchable, TouchableOpacity, TextInput, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import { StatusBar } from 'expo-status-bar'
+import { BottomTabView } from '@react-navigation/bottom-tabs'
 
 import SearchCustom from '../../Components/SearchCustom'
-import TimeCard from '../../Components/TimeCard'
-import { BottomTabView } from '@react-navigation/bottom-tabs'
+import ScheduleCard from '../../Components/ScheduleCard'
+import Category from '../../Components/Category'
 
 const Home = () => {
     const [search, setSearch] = useState('');
@@ -15,7 +16,7 @@ const Home = () => {
             <View
                 style={{
                     marginHorizontal: 20,
-                    marginTop: 10,
+                    marginVertical: 10,
                     flexDirection: 'row',
                     alignItems: 'center',
                     justifyContent: 'space-between'
@@ -35,7 +36,7 @@ const Home = () => {
                 <TouchableOpacity
                     style={{
                         borderRadius: 50,
-                        borderWidth: 1, 
+                        borderWidth: 1,
                         borderColor: '#000000'
                     }}>
                     <Ionicons
@@ -44,10 +45,13 @@ const Home = () => {
                         style={{ color: '#000080', }} />
                 </TouchableOpacity>
             </View>
-            <SearchCustom
-                placeholder='Cari Informasi Tentang Kesehatan/Dokter'
-                search={search} setSearch={setSearch} />
-            <TimeCard />
+            {/* <ScrollView> */}
+                <SearchCustom
+                    placeholder='Cari Informasi Tentang Kesehatan/Dokter'
+                    search={search} setSearch={setSearch} />
+                <ScheduleCard />
+                <Category />
+            {/* </ScrollView> */}
         </SafeAreaView>
     )
 }
