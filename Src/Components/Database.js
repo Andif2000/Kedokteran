@@ -77,25 +77,25 @@ export const Articels = [
     {
         id: 1,
         title: 'Cara Menjaga Pola Hidup Sehat',
-        description: 'inimo dulu karena dak tauka mau berkata-kata apa saya kodong, bukan ka puitisi',
+        description: 'inimo dulu karena dak tauka mau berkata-kata apa saya kodong, bukan ka orang pintar berkata-kata...',
         picture: require('../../assets/Images/dokter1.jpg')
     },
     {
         id: 2,
         title: 'Mengonsumsi Buah ini Dapat Memperbaiki Sistem Saraf',
-        description: 'inimo dulu karena dak tauka mau berkata-kata apa saya kodong, bukan ka puitisi',
+        description: 'inimo dulu karena dak tauka mau berkata-kata apa saya kodong, bukan ka orang pintar berkata-kata...',
         picture: require('../../assets/Images/dokter2.jpg')
     },
     {
         id: 3,
         title: 'Tips Agar Tulang Tetap Kokoh',
-        description: 'inimo dulu karena dak tauka mau berkata-kata apa saya kodong, bukan ka puitisi',
+        description: 'inimo dulu karena dak tauka mau berkata-kata apa saya kodong, bukan ka orang pintar berkata-kata...',
         picture: require('../../assets/Images/dokter3.jpg')
     },
     {
         id: 4,
         title: 'Lima Langkah Mudah Merawat Gigi Anda',
-        description: 'inimo dulu karena dak tauka mau berkata-kata apa saya kodong, bukan ka puitisi',
+        description: 'inimo dulu karena dak tauka mau berkata-kata apa saya kodong, bukan ka orang pintar berkata-kata...',
         picture: require('../../assets/Images/dokter4.jpg')
     },
 ]
