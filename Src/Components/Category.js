@@ -7,11 +7,13 @@ const Category = () => {
     const renderCategory = ({ index, item }) => {
         return (
             <View
-                style={{ marginTop: 10, }}>
+                style={{
+                    marginVertical: 10,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}>
                 <TouchableOpacity
                     style={{
-                        paddingVertical: 10,
-                        paddingHorizontal: 10,
                         marginRight: 10,
                         backgroundColor: item.name == 'Artikel' ? '#00baf7' : '#d3d3d3',
                         borderRadius: 15
@@ -19,7 +21,9 @@ const Category = () => {
                     <Text
                         style={{
                             color: item.name == 'Artikel' ? '#ffffff' : '#000000',
-                            fontSize: 14
+                            fontSize: 14,
+                            paddingVertical: 15,
+                            paddingHorizontal: 22
                         }}>{item.name}</Text>
                 </TouchableOpacity>
             </View>
@@ -28,24 +32,57 @@ const Category = () => {
 
     const renderArticels = ({ index, item }) => {
         return (
-            <View
+            <TouchableOpacity
                 style={{
-                    marginHorizontal: 20,
-                    marginTop: 10,
-                    backgroundColor: '#ffffff',
-                    borderRadius: 10,
-                    elevation: 10,
-                    width: width - 40
+                    marginBottom: 20,
+                    marginRight:10,
+                    
                 }}>
-                <View>
-                    <Image
-                        source={item.picture}
+                <View
+                    style={{}}>
+                    <View
                         style={{
-                            width: width - 100,
-                            height: height / 4
-                        }} />
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}>
+                        <Image
+                            source={item.picture}
+                            style={{
+                                width: width - 50,
+                                height: 200
+                            }} />
+                    </View>
+                    <View
+                        style={{
+                            marginVertical: 10,
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                        }}>
+                        <Image
+                            source={item.picture}
+                            style={{
+                                width: 50,
+                                height: 50,
+                                borderRadius: 50,
+                                borderWidth: 1,
+                                borderColor: '#000080'
+                            }} />
+                        <View
+                            style={{
+                                maxWidth: width - 100,
+                                marginLeft: 10,
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            }}>
+                            <Text
+                                style={{
+                                    fontSize: 16,
+                                    fontWeight: '400',
+                                }}>{item.title}</Text>
+                        </View>
+                    </View>
                 </View>
-            </View>
+            </TouchableOpacity>
         )
     }
     return (
@@ -70,18 +107,22 @@ const Category = () => {
                 </TouchableOpacity>
             </View>
 
-            <FlatList
-                data={Categori_List}
-                renderItem={renderCategory}
-                horizontal
-                showsHorizontalScrollIndicator={false} />
+            <View>
+                <FlatList
+                    data={Categori_List}
+                    renderItem={renderCategory}
+                    horizontal
+                    showsHorizontalScrollIndicator={false} />
+            </View>
 
-            <FlatList
-                data={Articels}
-                renderItem={renderArticels}
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                pagingEnabled />
+            <View>
+                <FlatList
+                    data={Articels}
+                    horizontal
+                    renderItem={renderArticels}
+                    showsHorizontalScrollIndicator={false}
+                    pagingEnabled />
+            </View>
         </View>
     )
 }
