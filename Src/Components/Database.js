@@ -94,7 +94,7 @@ export const Articels = [
     },
     {
         id: 4,
-        title: 'Lima Lankah Mudah Merawat Gigi Anda',
+        title: 'Lima Langkah Mudah Merawat Gigi Anda',
         description: 'inimo dulu karena dak tauka mau berkata-kata apa saya kodong, bukan ka puitisi',
         picture: require('../../assets/Images/dokter4.jpg')
     },
