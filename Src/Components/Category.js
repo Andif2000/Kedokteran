@@ -11,6 +11,7 @@ const Category = () => {
                     marginVertical: 10,
                     justifyContent: 'center',
                     alignItems: 'center',
+                    
                 }}>
                 <TouchableOpacity
                     style={{
@@ -32,31 +33,41 @@ const Category = () => {
 
     const renderArticels = ({ index, item }) => {
         return (
-            <TouchableOpacity
+            <View
                 style={{
-                    marginBottom: 20,
-                    marginRight:10,
-                    
+                    paddingBottom: 20,
+                    backgroundColor: '#00baf7',
+                    marginHorizontal: 20,
+                    borderTopRightRadius: 10,
+                    borderTopLeftRadius: 10,
+                    width: width - 40,
                 }}>
                 <View
                     style={{}}>
                     <View
                         style={{
                             alignItems: 'center',
-                            justifyContent: 'center'
+                            justifyContent: 'center',
+                            height: 200,
                         }}>
                         <Image
                             source={item.picture}
                             style={{
-                                width: width - 50,
-                                height: 200
+                                width: '100%',
+                                height: '100%',
+                                borderTopRightRadius: 10,
+                                borderTopLeftRadius: 10,
+                                justifyContent: 'center',
+                                alignItems: 'center'
                             }} />
                     </View>
+                    <TouchableOpacity>
                     <View
                         style={{
                             marginVertical: 10,
                             flexDirection: 'row',
                             alignItems: 'center',
+                            paddingHorizontal:10
                         }}>
                         <Image
                             source={item.picture}
@@ -65,11 +76,11 @@ const Category = () => {
                                 height: 50,
                                 borderRadius: 50,
                                 borderWidth: 1,
-                                borderColor: '#000080'
+                                borderColor: '#ffffff'
                             }} />
                         <View
                             style={{
-                                maxWidth: width - 100,
+                                maxWidth: width - 110,
                                 marginLeft: 10,
                                 alignItems: 'center',
                                 justifyContent: 'center'
@@ -77,24 +88,35 @@ const Category = () => {
                             <Text
                                 style={{
                                     fontSize: 16,
-                                    fontWeight: '400',
+                                    fontWeight: '600',
                                 }}>{item.title}</Text>
                         </View>
                     </View>
+                    <View
+                        style={{
+                            maxWidth: width ,
+                            paddingHorizontal:10
+                        }}>
+                        <Text
+                            style={{ letterSpacing: 1 }}>{item.description}</Text>
+                        <Text
+                            style={{ letterSpacing: 0, color:'blue' }}>read more...</Text>
+                    </View>
+                    </TouchableOpacity>
                 </View>
-            </TouchableOpacity>
+            </View>
         )
     }
     return (
         <View
             style={{
-                marginHorizontal: 20,
                 marginTop: 15
             }}>
             <View
                 style={{
                     flexDirection: 'row',
                     justifyContent: 'space-between',
+                    marginHorizontal: 20
                 }}>
                 <Text
                     style={{
@@ -112,7 +134,8 @@ const Category = () => {
                     data={Categori_List}
                     renderItem={renderCategory}
                     horizontal
-                    showsHorizontalScrollIndicator={false} />
+                    showsHorizontalScrollIndicator={false} 
+                    style={{marginHorizontal: 20}}/>
             </View>
 
             <View>
