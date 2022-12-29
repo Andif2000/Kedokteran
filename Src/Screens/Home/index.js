@@ -45,13 +45,15 @@ const Home = () => {
                         style={{ color: '#000080', }} />
                 </TouchableOpacity>
             </View>
-            {/* <ScrollView> */}
-                <SearchCustom
-                    placeholder='Cari Informasi Tentang Kesehatan/Dokter'
-                    search={search} setSearch={setSearch} />
-                <ScheduleCard />
-                <Category />
-            {/* </ScrollView> */}
+            <ScrollView>
+                <View>
+                    <SearchCustom
+                        placeholder='Cari Informasi Tentang Kesehatan/Dokter'
+                        search={search} setSearch={setSearch} />
+                    <ScheduleCard />
+                    <Category />
+                </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }
