@@ -13,39 +13,40 @@ const Home = () => {
     const [search, setSearch] = useState('');
     return (
         <SafeAreaView style={styles.container}>
-            <View
-                style={{
-                    marginHorizontal: 20,
-                    marginVertical: 10,
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'space-between'
-                }}>
-                <View>
-                    <Text
-                        style={{
-                            color: '#000080',
-                            fontWeight: '600'
-                        }}>Hello</Text>
-                    <Text
-                        style={{
-                            color: '#000080',
-                            fontSize: 22, fontWeight: 'bold'
-                        }}>Andif20 👋</Text>
-                </View>
-                <TouchableOpacity
+            <ScrollView
+                showsHorizontalScrollIndicator={false}>
+                <View
                     style={{
-                        borderRadius: 50,
-                        borderWidth: 1,
-                        borderColor: '#000000'
+                        marginHorizontal: 20,
+                        marginVertical: 10,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'space-between'
                     }}>
-                    <Ionicons
-                        name='person-circle-outline'
-                        size={40}
-                        style={{ color: '#000080', }} />
-                </TouchableOpacity>
-            </View>
-            <ScrollView>
+                    <View>
+                        <Text
+                            style={{
+                                color: '#000080',
+                                fontWeight: '600'
+                            }}>Hello</Text>
+                        <Text
+                            style={{
+                                color: '#000080',
+                                fontSize: 22, fontWeight: 'bold'
+                            }}>Andif20 👋</Text>
+                    </View>
+                    <TouchableOpacity
+                        style={{
+                            borderRadius: 50,
+                            borderWidth: 1,
+                            borderColor: '#000000'
+                        }}>
+                        <Ionicons
+                            name='person-circle-outline'
+                            size={40}
+                            style={{ color: '#000080', }} />
+                    </TouchableOpacity>
+                </View>
                 <View>
                     <SearchCustom
                         placeholder='Cari Informasi Tentang Kesehatan/Dokter'
